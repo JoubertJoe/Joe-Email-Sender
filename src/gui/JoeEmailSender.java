@@ -59,7 +59,7 @@ public class JoeEmailSender extends JFrame {
 	/**
 	 * Create the application.
 	 * 
-	 * Criando a aplicação.
+	 * Criando a aplicaï¿½ï¿½o.
 	 */
 	public JoeEmailSender() {
 		getContentPane().setBackground(Color.BLACK);
@@ -86,7 +86,7 @@ public class JoeEmailSender extends JFrame {
 	/**
 	 * Creating the content of the frame.
 	 * 
-	 * Criando o conteúdo da janela.
+	 * Criando o conteï¿½do da janela.
 	 */
 	private void createContent() {
 
@@ -98,10 +98,10 @@ public class JoeEmailSender extends JFrame {
 		txtAssuntoDoEmail.setBounds(120, 120, 344, 20);
 		getContentPane().add(txtAssuntoDoEmail);
 
-		// Email recipient - Destinatário do Email
+		// Email recipient - Destinatï¿½rio do Email
 		txtEmaildominiocom = new JTextField();
 		txtEmaildominiocom.setBounds(120, 89, 344, 20);
-		txtEmaildominiocom.setText("joubert.lellis@gmail.com");
+		txtEmaildominiocom.setText("joubert.lellis@hotmail.com");
 		getContentPane().add(txtEmaildominiocom);
 		txtEmaildominiocom.setColumns(10);
 
@@ -141,7 +141,7 @@ public class JoeEmailSender extends JFrame {
 		textCorpoDoEmail.setBackground(Color.DARK_GRAY);
 		scrollText.setViewportView(textCorpoDoEmail);
 
-		// Send Button - Botão Enviar
+		// Send Button - Botï¿½o Enviar
 		btnEnviar = new JButton("ENVIAR");
 		btnEnviar.setForeground(Color.WHITE);
 		btnEnviar.setFont(new Font("Verdana", Font.BOLD, 15));
