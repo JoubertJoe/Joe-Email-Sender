@@ -35,7 +35,7 @@ public class ProtocoloEmail {
 	 * @param emailBody - Corpo do email - Body of the Email
 	 * @param emailSubject - Assunto do EMail - Subject of the Email
 	 * @param emailSender - Remetente do email - Email Sender
-	 * @param emailRecipient - Destinatário do Email - Email Recipiente
+	 * @param emailRecipient - Destinatï¿½rio do Email - Email Recipiente
 	 * @param emailHost - HOST (Gmail, Hotmail, Yahoo)
 	 * @throws IOException
 	 * @throws UnknownHostException
@@ -61,7 +61,7 @@ public class ProtocoloEmail {
  *
  */
 	static class SMTP {
-		private final static int SMTP_PORT = 587; // Porta padrão SMTP - Default Port SMTP
+		private final static int SMTP_PORT = 587; // Porta padrï¿½o SMTP - Default Port SMTP
 		InetAddress mailHost;
 		InetAddress localhost;
 		BufferedReader in;
@@ -70,7 +70,7 @@ public class ProtocoloEmail {
 		/**
 		 * 
 		 * @param	host Host a ser usado - Host to be used. Ex: (gmail, hotmail, yahoo, etc...)
-		 * @throws	UnknownHostException Tratamento de exceção de Host - Host Exception
+		 * @throws	UnknownHostException Tratamento de exceï¿½ï¿½o de Host - Host Exception
 		 */
 		public SMTP(String host) throws UnknownHostException {
 			mailHost = InetAddress.getByName(host);
@@ -84,9 +84,9 @@ public class ProtocoloEmail {
 		 * 
 		 * @param msgEmail		Mensagem contendo Assunto e corpo de email - Mensage includind subject and body of the email.
 		 * @param from			Quem vai enviar o email - Who gonna send that Email.
-		 * @param to			Quem está recebendo o email - Who gonna recieve that email.
+		 * @param to			Quem estï¿½ recebendo o email - Who gonna recieve that email.
 		 * @return				Booleana para saber se tudo ocorreu bem - Boolean to check if everythings is right.
-		 * @throws IOException	Possíveis erros - Possible errors.
+		 * @throws IOException	Possï¿½veis erros - Possible errors.
 		 */
 		public boolean send(String msgAssunto, String msgEmail, String from, String to, String pass) throws IOException {
 		//	SSLSocket smtpSocket;
@@ -150,28 +150,29 @@ public class ProtocoloEmail {
 			out.flush();
 			System.out.println(msgAssunto);
 			
-			out.println(msgEmail);
+			out.println(msgEmail + "\n.\nQUIT\n");
 			out.flush();
 			System.out.println(msgEmail);
 			
 			System.out.println(".");
-			out.println(".");
-			out.flush();
 			
+			out.flush();
+			System.out.println("QUIT");
+		//	out.println("QUIT");
+			out.flush();
 			String acceptedOK = in.readLine();
 			String resposta;
 			
-			System.out.println("QUIT");
-			out.println("QUIT");
-			out.flush();
+			
 			
 			System.out.println(acceptedOK);
+			/*
 			do{
 			   resposta = in.readLine();
 			   
 			   System.out.println(resposta);
 			}while(resposta != null); 
-			 
+			 */
 			
 			return true;
 		}
