@@ -101,7 +101,7 @@ public class JoeEmailSender extends JFrame {
 		// Email recipient - Destinat�rio do Email
 		txtEmaildominiocom = new JTextField();
 		txtEmaildominiocom.setBounds(120, 89, 344, 20);
-		txtEmaildominiocom.setText("joubert.lellis@hotmail.com");
+		txtEmaildominiocom.setText("");
 		getContentPane().add(txtEmaildominiocom);
 		txtEmaildominiocom.setColumns(10);
 
@@ -174,7 +174,7 @@ public class JoeEmailSender extends JFrame {
 		passField = new JPasswordField();
 		passField.setForeground(Color.WHITE);
 		passField.setBackground(Color.BLACK);
-		passField.setText("iftmitba1");
+		passField.setText("");
 		passField.setColumns(10);
 		passField.setBounds(120, 39, 344, 20);
 		getContentPane().add(passField);
